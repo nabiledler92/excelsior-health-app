@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    image: mencare-poc:latest
+    container_name: mencare-poc
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${APP_PORT:-8080}:80"
